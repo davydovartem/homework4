@@ -63,7 +63,7 @@ namespace Homework4_task2
                     int widthM2 = matrixMaxWidth2 * cols + cols;
                     //первый столбец матрицы M1 - 0
                     int positionOfM1 = 0;
-                    //первый столбец матрицы M2, 3 - 1 в выражении - пробел+пробел(от " + ") - пробел(от первого пробела в цикле)
+                    //первый столбец матрицы M2, 3 - 1 ' пробел+пробел(от " + ") - пробел(от первого пробела в цикле)
                     int positionOfM2 = positionOfM1 + widthM1 + 3 - 1;
                     int positionOfA = positionOfM2 + widthM2 + 3 - 1;
                     //Выводим M1
