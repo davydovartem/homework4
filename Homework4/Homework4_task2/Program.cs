@@ -76,13 +76,14 @@ namespace Homework4_task2
                         }
                         Console.Write("\n");
                     }
-                    int cursLeft;
+                    //cursTop - текущее положение курсора по вертикали
                     int cursTop = Console.CursorTop;
-                    Console.SetCursorPosition(positionOfM2 - 2, cursTop - rows / 2 - 1);
+                    //смещаем курсор на "середину" матрицы и выводим +
+                    Console.SetCursorPosition(positionOfM2 - 2, cursTop - (rows / 2) - 1);
                     Console.Write(" + ");
                     //Выводим M2
-                    //зависит от четности количества строк
-                    cursTop = rows % 2 == 0 ? Console.CursorTop - rows / 2 + 1 :  Console.CursorTop - rows / 2;
+                    //положение по вертикали зависит от четности количества строк
+                    cursTop = (rows % 2) == 0 ? Console.CursorTop - (rows / 2) + 1 : Console.CursorTop - (rows / 2);
                     Console.SetCursorPosition(positionOfM2, cursTop);
                     for (int i = 0; i < rows; i++)
                     {
@@ -95,12 +96,11 @@ namespace Homework4_task2
                     }
                     //выводим =
                     cursTop = Console.CursorTop;
-                    Console.SetCursorPosition(positionOfA - 2, cursTop - rows / 2 - 1);
+                    Console.SetCursorPosition(positionOfA - 2, cursTop - (rows / 2) - 1);
                     Console.Write(" = ");
                     //Выводим A
-                    cursLeft = Console.CursorLeft;
-                    //зависит от четности количества строк
-                    cursTop = rows % 2 == 0 ? Console.CursorTop - rows / 2 + 1 : Console.CursorTop - rows / 2;
+                    //положение по вертикали зависит от четности количества строк
+                    cursTop = (rows % 2) == 0 ? Console.CursorTop - (rows / 2) + 1 : Console.CursorTop - (rows / 2);
                     Console.SetCursorPosition(positionOfA, cursTop);
                     for (int i = 0; i < rows; i++)
                     {
